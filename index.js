@@ -8,10 +8,11 @@ const port = 3000;
 // Configuração do MySQL
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'root', // Seu nome de usuário do MySQL
-  password: 'sua_senha', // Sua senha do MySQL
-  database: 'usersdb'
+  user: 'root',//process.env.MYSQL_USER, // Usa variáveis de ambiente
+  password: 'sua_senha',//process.env.MYSQL_PASSWORD,
+  database: 'usersdb'//process.env.MYSQL_DATABASE
 });
+
 
 // Conectar ao banco de dados
 connection.connect((err) => {
@@ -58,3 +59,6 @@ app.get('/users/:id', (req, res) => {
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });
+
+
+module.exports = app
