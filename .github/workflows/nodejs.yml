@@ -30,7 +30,7 @@ jobs:
       run: npm install
     - name: Start MySQL
       run: sudo /etc/init.d/mysql start
-      name: sudo apt install cliente mysql
+      name: Install cliente mysql
       run: apt install mysql-client
       name: Criar Tabelas
       run: mysql -h localhost -u root -p wesley@gmail.com usersdb < estrutura.sql
