@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
 
   host: 'localhost',
   user: process.env.MYSQL_USER, // Usa variáveis de ambiente
-  password: process.env.MYSQL_PASSWORD,
+  password: process.env.MYSQL_ROOT_PASSWORD,
   database: process.env.MYSQL_DATABASE
 });
 
